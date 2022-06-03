@@ -1,0 +1,13 @@
+<h1 class="azure">Graph Statistics</h1>
+<button (click)="startCarousell()" class="azure">Play</button>
+<button (click)="stopCarousell()" class="azure">Pause</button>
+<div>
+  <swiper #swiperSlideShow [config]="config">
+    <ng-template swiperSlide *ngFor="let point of endPoints">
+      <iframe
+        [src]="point.src | safe"
+        style="width: 100%; height: 100%"
+      ></iframe>
+    </ng-template>
+  </swiper>
+</div>
